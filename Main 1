@@ -1,6 +1,4 @@
-// Rectangle 2
-
-
+// Main
 let view = UILabel()
 
 view.frame = CGRect(x: 0, y: 0, width: 350, height: 669)
@@ -303,6 +301,562 @@ view.font = UIFont(name: "Roboto-Bold", size: 12)
 
 
 view.text = "Looking for a group of 4"
+
+
+let parent = self.view!
+
+parent.addSubview(view)
+
+view.translatesAutoresizingMaskIntoConstraints = false
+
+view.widthAnchor.constraint(equalToConstant: 288).isActive = true
+
+view.heightAnchor.constraint(equalToConstant: 22).isActive = true
+
+view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 71).isActive = true
+
+view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 439).isActive = true
+
+
+
+
+// Software Developer at Google, CA (4 years)
+
+
+let view = UILabel()
+
+view.frame = CGRect(x: 0, y: 0, width: 288, height: 22)
+
+view.backgroundColor = .white
+
+self.view = view
+
+
+view.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+
+view.font = UIFont(name: "Roboto-Bold", size: 12)
+
+
+// Line height: 14 pt
+
+
+view.text = "Software Developer at Google, CA (4 years)"
+
+
+let parent = self.view!
+
+parent.addSubview(view)
+
+view.translatesAutoresizingMaskIntoConstraints = false
+
+view.widthAnchor.constraint(equalToConstant: 288).isActive = true
+
+view.heightAnchor.constraint(equalToConstant: 22).isActive = true
+
+view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 71).isActive = true
+
+view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 508).isActive = true
+
+
+
+
+// Java, Swift, Python, C++, and Javascript
+
+
+let view = UILabel()
+
+view.frame = CGRect(x: 0, y: 0, width: 288, height: 22)
+
+view.backgroundColor = .white
+
+self.view = view
+
+
+view.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+
+view.font = UIFont(name: "Roboto-Bold", size: 12)
+
+
+// Line height: 14 pt
+
+
+view.text = "Java, Swift, Python, C++, and Javascript"
+
+
+let parent = self.view!
+
+parent.addSubview(view)
+
+view.translatesAutoresizingMaskIntoConstraints = false
+
+view.widthAnchor.constraint(equalToConstant: 288).isActive = true
+
+view.heightAnchor.constraint(equalToConstant: 22).isActive = true
+
+view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 71).isActive = true
+
+view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 542).isActive = true
+
+
+
+
+// Lives in Long Beach, California, United States
+
+
+let view = UILabel()
+
+view.frame = CGRect(x: 0, y: 0, width: 288, height: 22)
+
+view.backgroundColor = .white
+
+self.view = view
+
+
+view.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+
+view.font = UIFont(name: "Roboto-Bold", size: 12)
+
+
+// Line height: 14 pt
+
+
+view.text = "Lives in Long Beach, California, United States"
+
+
+let parent = self.view!
+
+parent.addSubview(view)
+
+view.translatesAutoresizingMaskIntoConstraints = false
+
+view.widthAnchor.constraint(equalToConstant: 288).isActive = true
+
+view.heightAnchor.constraint(equalToConstant: 22).isActive = true
+
+view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 71).isActive = true
+
+view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 578).isActive = true
+
+
+
+
+// Hi, I’m looking for software developers for MHacks. My LinkedIn is on my bio!
+
+
+let view = UILabel()
+
+view.frame = CGRect(x: 0, y: 0, width: 260, height: 60)
+
+view.backgroundColor = .white
+
+self.view = view
+
+
+view.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+
+view.font = UIFont(name: "Roboto-Bold", size: 12)
+
+view.numberOfLines = 0
+
+view.lineBreakMode = .byWordWrapping
+
+
+// Line height: 14 pt
+
+
+view.text = "Hi, I’m looking for software developers for MHacks. My LinkedIn is on my bio!"
+
+
+let parent = self.view!
+
+parent.addSubview(view)
+
+view.translatesAutoresizingMaskIntoConstraints = false
+
+view.widthAnchor.constraint(equalToConstant: 260).isActive = true
+
+view.heightAnchor.constraint(equalToConstant: 60).isActive = true
+
+view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 71).isActive = true
+
+view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 612).isActive = true
+
+
+
+
+// Rectangle 7
+
+
+let view = UILabel()
+
+view.frame = CGRect(x: 0, y: 0, width: 384, height: 86)
+
+view.backgroundColor = .white
+
+self.view = view
+
+
+view.layer.backgroundColor = UIColor(red: 0.97, green: 0.97, blue: 0.97, alpha: 1).cgColor
+
+
+let parent = self.view!
+
+parent.addSubview(view)
+
+view.translatesAutoresizingMaskIntoConstraints = false
+
+view.widthAnchor.constraint(equalToConstant: 384).isActive = true
+
+view.heightAnchor.constraint(equalToConstant: 86).isActive = true
+
+view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: -5).isActive = true
+
+view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 726).isActive = true
+
+
+
+
+// grouper cut 1
+
+
+let view = UILabel()
+
+view.frame = CGRect(x: 0, y: 0, width: 158, height: 37)
+
+view.backgroundColor = .white
+
+self.view = view
+
+
+view.layer.compositingFilter = "colorBurnBlendMode"
+
+let image0 = UIImage(named: "grouper cut.png")?.cgImage
+
+let layer0 = CALayer()
+
+layer0.contents = image0
+
+layer0.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 1, b: 0, c: 0, d: 1.01, tx: 0, ty: -0.01))
+
+layer0.bounds = view.bounds
+
+layer0.position = view.center
+
+view.layer.addSublayer(layer0)
+
+
+
+let parent = self.view!
+
+parent.addSubview(view)
+
+view.translatesAutoresizingMaskIntoConstraints = false
+
+view.widthAnchor.constraint(equalToConstant: 158).isActive = true
+
+view.heightAnchor.constraint(equalToConstant: 37).isActive = true
+
+view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 108).isActive = true
+
+view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 751).isActive = true
+
+
+
+
+// RANDOM MATCH
+
+
+let view = UILabel()
+
+view.frame = CGRect(x: 0, y: 0, width: 160, height: 33)
+
+view.backgroundColor = .white
+
+self.view = view
+
+
+view.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+
+view.font = UIFont(name: "Roboto-Bold", size: 20)
+
+
+// Line height: 23 pt
+
+
+view.text = "RANDOM MATCH"
+
+
+let parent = self.view!
+
+parent.addSubview(view)
+
+view.translatesAutoresizingMaskIntoConstraints = false
+
+view.widthAnchor.constraint(equalToConstant: 160).isActive = true
+
+view.heightAnchor.constraint(equalToConstant: 33).isActive = true
+
+view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 106).isActive = true
+
+view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 29).isActive = true
+
+
+
+
+// Union
+
+
+let view = UILabel()
+
+view.frame = CGRect(x: 0, y: 0, width: 33, height: 23.5)
+
+view.backgroundColor = .white
+
+self.view = view
+
+
+view.layer.backgroundColor = UIColor(red: 0.87, green: 0.86, blue: 0.86, alpha: 1).cgColor
+
+
+let parent = self.view!
+
+parent.addSubview(view)
+
+view.translatesAutoresizingMaskIntoConstraints = false
+
+view.widthAnchor.constraint(equalToConstant: 33).isActive = true
+
+view.heightAnchor.constraint(equalToConstant: 23.5).isActive = true
+
+view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 37).isActive = true
+
+view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 759).isActive = true
+
+
+
+
+// ic-round-message
+
+
+let view = UILabel()
+
+view.frame = CGRect(x: 0, y: 0, width: 37, height: 33)
+
+view.backgroundColor = .white
+
+self.view = view
+
+
+view.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
+
+
+let parent = self.view!
+
+parent.addSubview(view)
+
+view.translatesAutoresizingMaskIntoConstraints = false
+
+view.widthAnchor.constraint(equalToConstant: 37).isActive = true
+
+view.heightAnchor.constraint(equalToConstant: 33).isActive = true
+
+view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 300).isActive = true
+
+view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 757).isActive = true
+
+
+
+
+// ion-search-outline
+
+
+let view = UILabel()
+
+view.frame = CGRect(x: 0, y: 0, width: 23, height: 23)
+
+view.backgroundColor = .white
+
+self.view = view
+
+
+view.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
+
+
+let parent = self.view!
+
+parent.addSubview(view)
+
+view.translatesAutoresizingMaskIntoConstraints = false
+
+view.widthAnchor.constraint(equalToConstant: 23).isActive = true
+
+view.heightAnchor.constraint(equalToConstant: 23).isActive = true
+
+view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 43).isActive = true
+
+view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 435).isActive = true
+
+
+
+
+// uil-graduation-hat
+
+
+let view = UILabel()
+
+view.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+
+view.backgroundColor = .white
+
+self.view = view
+
+
+view.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
+
+
+let parent = self.view!
+
+parent.addSubview(view)
+
+view.translatesAutoresizingMaskIntoConstraints = false
+
+view.widthAnchor.constraint(equalToConstant: 24).isActive = true
+
+view.heightAnchor.constraint(equalToConstant: 24).isActive = true
+
+view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 43).isActive = true
+
+view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 467).isActive = true
+
+
+
+
+// uil-pen
+
+
+let view = UILabel()
+
+view.frame = CGRect(x: 0, y: 0, width: 22, height: 22)
+
+view.backgroundColor = .white
+
+self.view = view
+
+
+view.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
+
+
+let parent = self.view!
+
+parent.addSubview(view)
+
+view.translatesAutoresizingMaskIntoConstraints = false
+
+view.widthAnchor.constraint(equalToConstant: 22).isActive = true
+
+view.heightAnchor.constraint(equalToConstant: 22).isActive = true
+
+view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 42).isActive = true
+
+view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 540).isActive = true
+
+
+
+
+// uil-bag-alt
+
+
+let view = UILabel()
+
+view.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+
+view.backgroundColor = .white
+
+self.view = view
+
+
+view.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
+
+
+let parent = self.view!
+
+parent.addSubview(view)
+
+view.translatesAutoresizingMaskIntoConstraints = false
+
+view.widthAnchor.constraint(equalToConstant: 24).isActive = true
+
+view.heightAnchor.constraint(equalToConstant: 24).isActive = true
+
+view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 42).isActive = true
+
+view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 502).isActive = true
+
+
+
+
+// bytesize-location
+
+
+let view = UILabel()
+
+view.frame = CGRect(x: 0, y: 0, width: 22, height: 22)
+
+view.backgroundColor = .white
+
+self.view = view
+
+
+view.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
+
+
+let parent = self.view!
+
+parent.addSubview(view)
+
+view.translatesAutoresizingMaskIntoConstraints = false
+
+view.widthAnchor.constraint(equalToConstant: 22).isActive = true
+
+view.heightAnchor.constraint(equalToConstant: 22).isActive = true
+
+view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 42).isActive = true
+
+view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 573).isActive = true
+
+
+
+
+// ant-design:message-outline
+
+
+let view = UILabel()
+
+view.frame = CGRect(x: 0, y: 0, width: 23, height: 23)
+
+view.backgroundColor = .white
+
+self.view = view
+
+
+view.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
+
+
+let parent = self.view!
+
+parent.addSubview(view)
+
+view.translatesAutoresizingMaskIntoConstraints = false
+
+view.widthAnchor.constraint(equalToConstant: 23).isActive = true
+
+view.heightAnchor.constraint(equalToConstant: 23).isActive = true
+
+view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 42).isActive = true
+
+view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 612).isActive = true
+
+
 
 
 let parent = self.view!
