@@ -1,19 +1,42 @@
-#Used KMeans Clustering to determine the ideal centroid points to group the users into 5 main categories
+import numpy as np
+import pandas as pd
 
+
+current_data = pd.read_csv("NEWDataCSV.csv")
 
 def CalculateDistance(x1, y1, x2, y2):
     return round(pow(((x1 - x2) * (x1 - x2) + (y1-y2) * (y1-y2)), 0.5),2)
 
+#Used KMeans Clustering to determine the ideal centroid points to group the users into 5 main categories
 #Function takes the 5 answers from the survey questions and returns the group that the user most aligns with
-def matchingInfo(r1, r2, r3, r4, r5):
-    xCoord = r1 + r3 + r5
-    yCoord = r2 + r4
+def matchingInfo(newUserResponses):
+    xCoord = newUserResponses[0] + newUserResponses[2] + newUserResponses[4]
+    yCoord = newUserResponses[1] + newUserResponses[3]
     distanceArray = []
     BasePoints = [[6,8], [5.5, 4.5], [9,3], [9,6], [12.5, 5]]
     for x in range(5):
         distanceArray.append(CalculateDistance(xCoord, yCoord, BasePoints[x][0], BasePoints[x][1]))
-    print(distanceArray)
     return distanceArray.index(min(distanceArray)) + 1
 
-print(matchingInfo(5, 4, 3, 1, 4))
+
+#Function takes 3 arrays - userlang preferences[3], user proj preferences[3], personality questions responses[5]
+def userMatch(NewUserLang, newUserProj, newUserQuestions):
+    category = matchingInfo(newUserQuestions)
+    category_df = current_data[current_data['Category'] == category]
+    category_df['Match'] = 0
+    for z in range(len(category_df)):
+        MatchPoints = 0
+        currentLang = [category_df.iloc[z]['Lang1'], category_df.iloc[z]['Lang2'], category_df.iloc[z]['Lang3']]
+        currentProj = [category_df.iloc[z]['Interest1'], category_df.iloc[z]['Interest2'], category_df.iloc[z]['Interest3']]
+        for x in range(3):
+            if(currentLang[x] in NewUserLang):
+                MatchPoints += 1
+            if(currentProj[x] in newUserProj):
+                MatchPoints += 2
+        category_df['Match'].iloc[z] = MatchPoints
+    return_df = category_df.sort_values(by='Match', ascending=False).head(15)
+    return return_df
+   
+
+print(userMatch([5,6,8],[5,7,1], [1,2,3,4,5]))
 
