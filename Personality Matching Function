@@ -1,0 +1,19 @@
+#Used KMeans Clustering to determine the ideal centroid points to group the users into 5 main categories
+
+
+def CalculateDistance(x1, y1, x2, y2):
+    return round(pow(((x1 - x2) * (x1 - x2) + (y1-y2) * (y1-y2)), 0.5),2)
+
+#Function takes the 5 answers from the survey questions and returns the group that the user most aligns with
+def matchingInfo(r1, r2, r3, r4, r5):
+    xCoord = r1 + r3 + r5
+    yCoord = r2 + r4
+    distanceArray = []
+    BasePoints = [[6,8], [5.5, 4.5], [9,3], [9,6], [12.5, 5]]
+    for x in range(5):
+        distanceArray.append(CalculateDistance(xCoord, yCoord, BasePoints[x][0], BasePoints[x][1]))
+    print(distanceArray)
+    return distanceArray.index(min(distanceArray)) + 1
+
+print(matchingInfo(5, 4, 3, 1, 4))
+
