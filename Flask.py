@@ -7,7 +7,6 @@
 import pandas as pd
 import numpy as np
 import firebase_admin
-from firebase_admin import db
 from firebase_admin import credentials
 from firebase_admin import auth
 from multiprocessing import Pool, TimeoutError
@@ -21,73 +20,8 @@ firebase_admin.initialize_app(cred, {
 
 # In[32]:
 
-
+from firebase_admin import db
 from flask import Flask, jsonify, request
-from firebase_admin import db
-root = db.reference()
-
-app = Flask(__name__)
-current_data = pd.read_csv("NEWDataCSV.csv")
-
-#Works
-@app.route('/create_user', methods=['POST'])
-def index():
-    some_json = request.get_json()
-    print(some_json)
-    userUID = createUser(some_json['email'], some_json['phone'], some_json['passw'], some_json['disp_name'])
-    print(userUID)
-    return jsonify(userUID)
-
-#Works
-@app.route('/generate_user_tree', methods=['POST'])
-def gen_user_tree():
-    new_data = request.get_json()
-    insertNewUserTree(new_data['UID'], new_data['person'], new_data['lang'], new_data['project'], new_data['category'])
-    return jsonify({"Status":"True"})
-
-#Works
-@app.route('/swipe_no', methods=['POST'])
-def SwipeNo():
-    new_data = request.get_json()
-    userSwipeNo(new_data['UID'])
-    return jsonify({"Status":"True"})
-
-#Works
-@app.route('/swipe_yes', methods=['POST'])
-def SwipeYes():
-    new_data = request.get_json()
-    userSwipeYes(new_data['Swiper'], new_data['Swiped'])
-    return jsonify({"Status":"True"})
-
-#Works
-@app.route('/generate_queue', methods=['POST'])
-def GenQ():
-    new_data = request.get_json()
-    generateQueue(new_data['UID'])
-    return jsonify({"Status":"True"})
-
-#Works
-@app.route('/get_profile', methods=['POST'])
-def getProfile():
-    new_data = request.get_json()
-    result = getUserData(new_data['UID'])
-    return jsonify(result)
-
-#Works
-@app.route('/user_match', methods=['POST'])
-def getMatches():
-    new_data = request.get_json()
-    result = userMatch(new_data['NewUserLang'], new_data['newUserProj'], new_data['newUserQuestions'])
-    return jsonify(result)
-    
-if __name__ == '__main__':
-    app.run()
-
-
-# In[31]:
-
-
-from firebase_admin import db
 root = db.reference()
 
 def insertNewUserTree(UID, person, lang, project, category):
@@ -354,4 +288,66 @@ def userMatch(NewUserLang, newUserProj, newUserQuestions):
         ref = db.reference("NameToUID/" + nameList[x])
         UIDList.append(ref.get())
     return UIDList
+
+
+
+app = Flask(__name__)
+current_data = pd.read_csv("NEWDataCSV.csv")
+
+#Works
+@app.route('/create_user', methods=['POST'])
+def index():
+    some_json = request.get_json()
+    print(some_json)
+    userUID = createUser(some_json['email'], some_json['phone'], some_json['passw'], some_json['disp_name'])
+    print(userUID)
+    return jsonify(userUID)
+
+#Works
+@app.route('/generate_user_tree', methods=['POST'])
+def gen_user_tree():
+    new_data = request.get_json()
+    insertNewUserTree(new_data['UID'], new_data['person'], new_data['lang'], new_data['project'], new_data['category'])
+    return jsonify({"Status":"True"})
+
+#Works
+@app.route('/swipe_no', methods=['POST'])
+def SwipeNo():
+    new_data = request.get_json()
+    userSwipeNo(new_data['UID'])
+    return jsonify({"Status":"True"})
+
+#Works
+@app.route('/swipe_yes', methods=['POST'])
+def SwipeYes():
+    new_data = request.get_json()
+    userSwipeYes(new_data['Swiper'], new_data['Swiped'])
+    return jsonify({"Status":"True"})
+
+#Works
+@app.route('/generate_queue', methods=['POST'])
+def GenQ():
+    new_data = request.get_json()
+    generateQueue(new_data['UID'])
+    return jsonify({"Status":"True"})
+
+#Works
+@app.route('/get_profile', methods=['POST'])
+def getProfile():
+    new_data = request.get_json()
+    result = getUserData(new_data['UID'])
+    return jsonify(result)
+
+#Works
+@app.route('/user_match', methods=['POST'])
+def getMatches():
+    new_data = request.get_json()
+    result = userMatch(new_data['NewUserLang'], new_data['newUserProj'], new_data['newUserQuestions'])
+    return jsonify(result)
+    
+if __name__ == '__main__':
+    app.run()
+
+
+# In[31]:
 
