@@ -15,7 +15,7 @@
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="image/cytrus_fruit-png.png" type="image/x-icon" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <!-- Bootstrap CSS -->
@@ -48,8 +48,8 @@
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<div class="left-soi">
 						<ul>
-							<li class="social-links"><a href="#"><i class="fa fa-apple"></i></a></li>
-							<li class="social-links"><a href="#"><i class="fa fa-android"></i></a></li>
+							<li class="social-links"><a href="https://www.apple.com/ios/app-store/"target = "_blank"><i class="fa fa-apple" ></i></a></li>
+							<li class="social-links"><a href="https://play.google.com" target = "_blank"><i class="fa fa-android"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -91,7 +91,8 @@
                     <div class="big-tagline">
                         <h2>Expand your network by interests</h2>
                         <p class="lead">With Cytrus you can meet new teammates </br>from all around the world! All based on the </br> profession, skills, goal, and characteristics!</p>
-                        <a data-scroll href="#order" class="btn btn-light btn-radius btn-brd"><i class="fa fa-play" aria-hidden="true"></i> GooglePlay </a>
+                        <a data-scroll href="#order" class="btn btn-light btn-radius btn-brd"><i class="fa fa-android" aria-hidden="true"></i> GooglePlay </a>
+                        <a data-scroll href="#order" class="btn btn-light btn-radius btn-brd"><i class="fa fa-apple" aria-hidden="true"></i> App Store </a>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                     </div>
@@ -108,7 +109,7 @@
      margin-bottom: 3cm;
   }
 </style>
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <div class="how-its-work clearfix">
         <div class="hc colon1">
             <h2>1</h2>
@@ -372,7 +373,7 @@
         <div class="container">
             <div class="section-title text-center">
                 <h3>User Reviews</h3>
-                <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers! <br>Let's see what others say about Appfast website template!</p>
+                <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy users! <br>Let's see what others say about Cytrus!</p>
             </div><!-- end title -->
 
             <div class="row">
@@ -487,7 +488,7 @@
                         <ul class="footer-links">
                             <li><a href="mailto:#">help@cytrus.com</a></li>
                             <li><a href="#">www.cytrusapp.com</a></li>
-                            <li>500 S State St, Ann Arbor, MI 48109</li>
+                            <li><a href="https://www.google.com/maps/dir/42.2730295,-83.7517695/Literature+Science+and+the+Arts+Building,+500+S+State+St,+Ann+Arbor,+MI+48109/@42.2753606,-83.7508842,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x883cae38a04fec25:0x960c1ef91cfba6bc!2m2!1d-83.7412441!2d42.2762537" target="_blank"> 500 S State St, Ann Arbor, MI 48109</a></li>
                             <li>+1 248-930-****</li>
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
@@ -498,7 +499,7 @@
                         <div class="widget-title">
                             <h3>Newsletter</h3>
 							<p>“No road is long with good company.”
-                  — Turkish Proverb</p>
+              </br>— Turkish Proverb</p>
                         </div>
 						<div class="footer-right">
 							<form method="get" action="#">
