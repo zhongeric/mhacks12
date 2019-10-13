@@ -9,6 +9,10 @@
 import UIKit
 import Kingfisher
 import ImageSlideshow
+import FirebaseDatabase
+import Alamofire
+import Firebase
+import SwiftyJSON
 
 class ViewController: UIViewController {
 
@@ -16,6 +20,7 @@ class ViewController: UIViewController {
 //    @IBOutlet weak var mainImageView: UIView!
     @IBOutlet weak var mainImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
     @IBOutlet weak var card: UIView!
     @IBOutlet weak var descriptionView: UIView!
     @IBOutlet weak var skillsView: UIStackView!
@@ -25,6 +30,23 @@ class ViewController: UIViewController {
     
     var delegate: ViewControllerDelegate?
     
+    var ref: DatabaseReference!
+    let userID = Auth.auth().currentUser?.uid
+    var prospective = ""
+
+    var languagesRef = [
+        "1": "C++",
+        "2": "Python",
+        "3": "JS",
+        "4": "React",
+        "5": "Ruby",
+        "6": "HTML/CSS",
+        "7": "C#",
+        "8": "Swift",
+        "9": "Java",
+        "10": "PHP"
+    ]
+
     // MARK: Helper functions
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
@@ -107,13 +129,131 @@ class ViewController: UIViewController {
         return skillLabel
     }
     
+    // MARK: API Calls
+    
+    func getProfile(userID: String) -> NSDictionary {
+        let parameters: [String: String] = [
+            "UID":userID
+        ]
+        var place_holder_dict = NSDictionary()
+        AF.request("http://3.92.77.227/get_profile", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+                                .responseJSON { response in
+        //                            print(response)
+                    //to get status code
+        //                            if let status = response.response?.statusCode {
+        //                                switch(status){
+        //                                case 201:
+        //                                    print("example success")
+        //                                default:
+        //                                    print("error with response status: \(status)")
+        //                                }
+        //                            }
+                    //to get JSON return value
+                    if let result = response.value {
+//                        let JSON = result as! NSDictionary
+//                        print(JSON)
+                        let json = JSON(result as! NSDictionary)
+
+                        print(json["Data"]["Name"])
+                        self.nameLabel.text = json["Data"]["Name"].stringValue
+                        self.bioLabel.text = json["Data"]["Bio"].stringValue
+//                        place_holder_dict = JSON
+                        
+                        if(self.skillsView.arrangedSubviews.count > 1){
+                            for _ in 0...2 {
+                                print(self.skillsView.arrangedSubviews)
+                                self.skillsView.arrangedSubviews[0].removeFromSuperview()
+                            }
+                        }
+                        
+                        for x in 0...2 {
+//                            print(json["Data"]["Languages"][x])
+                            var skill = self.languagesRef[json["Data"]["Languages"][x].stringValue]
+                            self.skillsView.addArrangedSubview(self.createSkill(skill: skill ?? "Code"))
+//                            self.skillsView.tag = 101
+
+                        }
+                        
+
+                }
+        }
+        return place_holder_dict
+    }
+    
+    func swipeNo(userID: String) -> NSDictionary {
+            let parameters: [String: String] = [
+                "UID":userID
+            ]
+            var place_holder_dict = NSDictionary()
+            AF.request("http://3.92.77.227/swipe_no", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+                        .responseJSON { response in
+
+                        //to get JSON return value
+                        if let result = response.value {
+    //                        let JSON = result as! NSDictionary
+    //                        print(JSON)
+                            let json = JSON(result as! NSDictionary)
+
+                            print(json["Status"])
+                    }
+            }
+            return place_holder_dict
+        }
+    
+    func swipeYes(swiper: String, swiped: String) -> NSDictionary {
+            let parameters: [String: String] = [
+                "Swiper":swiper,
+                "Swiped":swiped
+            ]
+            var place_holder_dict = NSDictionary()
+            AF.request("http://3.92.77.227/swipe_yes", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+                        .responseJSON { response in
+
+                        //to get JSON return value
+                        if let result = response.value {
+    //                        let JSON = result as! NSDictionary
+    //                        print(JSON)
+                            let json = JSON(result as! NSDictionary)
+
+                            print(json["Status"])
+                    }
+            }
+            return place_holder_dict
+        }
+    
     func showNew(){
         // populate,  add segue to it
+        ref = Database.database().reference()
+        
+        print(self.userID!)
+        ref.child("UserBase").child(self.userID!).child("Actions").child("Current Queue").observeSingleEvent(of: .value, with: { (snapshot) in
+          // Get user value
+//            print(snapshot.value)
+            let value = snapshot.value as? [String]
+//                let current_queue = value as? [String]
+            
+            print(value![0]) // TODO: add error handling bc queue can hit 0
+            self.prospective = value![0]
+            
+            // call get_profile endpoint to geet all data on that user
+            var profile_data = self.getProfile(userID: value![0])
+//            print(profile_data)
+//            print(profile_data["Data"])
+//            print(profile_data["Name"] as? String)
+            
+            
+            
+          // ...
+          }) { (error) in
+            print(error.localizedDescription)
+        }
+
+        
         let names = ["Frodo", "Sam", "Wise", "Gamgee", "John", "Sarah", "Jacob", "Melinda"]
         let newValue = names.randomElement()
         print(newValue!)
         nameLabel.text = newValue
-        print(self.slideshow)
+//        print(self.slideshow)
         self.slideshow.setImageInputs([
           KingfisherSource(urlString: "https://media.glamour.com/photos/5c41e410b3ec153a69d6cbf9/6:7/w_2309,h_2694,c_limit/GettyImages-902")!,
           KingfisherSource(urlString: "https://media.glamour.com/photos/5c41e410b3ec153a69d6cbf9/6:7/w_2309,h_2694,c_limit/GettyImages-902")!,
@@ -136,9 +276,7 @@ class ViewController: UIViewController {
         
         // Skills Population
 //        let sView = UIView()
-        
-        self.skillsView.addArrangedSubview(createSkill(skill: "Python"))
-        
+                
     }
     
     override func viewDidLoad() {
@@ -193,6 +331,7 @@ class ViewController: UIViewController {
         // move to left
         translate()
         showNew()
+        swipeNo(userID: self.userID!)
     }
 
     @IBAction func swipeRight(_ sender: Any) {
@@ -201,6 +340,8 @@ class ViewController: UIViewController {
         // move to left
         translateRight()
         showNew()
+        swipeYes(swiper: self.userID!, swiped: self.prospective)
+        
     }
     @IBAction func showMenu(_ sender: Any) {
         print("Show menu tapped")

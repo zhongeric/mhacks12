@@ -11,6 +11,8 @@ import UIKit
 import Kingfisher
 import FirebaseAuth
 import Firebase
+import Alamofire
+import SwiftyJSON
 
 class LeftViewController: UIViewController {
 //    @IBOutlet weak var avatarImage: UIImageView!
@@ -18,9 +20,47 @@ class LeftViewController: UIViewController {
     
     @IBOutlet weak var avatarImage: UIImageView!
     
+//    func makeRequest(endpoint: String, data: [String: String]) -> NSDictionary {
+//        AF.request("http://3.92.77.227/" + endpoint, method: .post, parameters: data, encoder: JSONParameterEncoder.default).responseJSON { response in
+//                print("Response JSON: \(response.value)")
+//                return response.value
+//        }
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        
+        let userID = Auth.auth().currentUser?.uid
+        if(userID != nil) { // user is signed in
+            print("user id is")
+            print(userID!)
+            let parameters: [String: String] = [
+                "UID":userID!
+            ]
+
+            AF.request("http://3.92.77.227/get_profile", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+                        .responseJSON { response in
+//                            print(response)
+            //to get status code
+//                            if let status = response.response?.statusCode {
+//                                switch(status){
+//                                case 201:
+//                                    print("example success")
+//                                default:
+//                                    print("error with response status: \(status)")
+//                                }
+//                            }
+            //to get JSON return value
+                        if let result = response.value {
+                            let JSON = result as! NSDictionary
+                            print(JSON)
+                        }
+                }
+        }
+        else {
+            // kick back to login
+        }
     }
     
     // MARK: Helper functions

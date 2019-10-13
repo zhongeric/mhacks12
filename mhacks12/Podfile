@@ -13,6 +13,8 @@ target 'mhacks12' do
   pod 'Kingfisher', '~> 5.0'
   pod 'ImageSlideshow', '~> 1.8.1'
   pod "ImageSlideshow/Kingfisher"
+  pod 'Alamofire', '~> 5.0.0-rc.2'
+  pod 'SwiftyJSON', '~> 4.0'
 
 
   target 'mhacks12Tests' do

@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.0.0-rc.2)
   - Firebase/Auth (6.10.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.3.0)
@@ -95,8 +96,10 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0-rc.2)
   - Firebase/Core
   - Firebase/Database
   - FirebaseUI/Auth
@@ -104,9 +107,11 @@ DEPENDENCIES:
   - ImageSlideshow (~> 1.8.1)
   - ImageSlideshow/Kingfisher
   - Kingfisher (~> 5.0)
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -126,8 +131,10 @@ SPEC REPOS:
     - Kingfisher
     - leveldb-library
     - nanopb
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
   Firebase: 5e6b7b12bf9adb90986688edc06b156c37e109cd
   FirebaseAnalytics: 0e3ecff2c5d86070f7d4325e21f1edabfbd558dc
   FirebaseAuth: c66e990f79d1d3429165391f6cd70ace6143c25e
@@ -147,7 +154,8 @@ SPEC CHECKSUMS:
   Kingfisher: b7e4cb65ff24c264bd2a1284b75b974d907afd94
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 073a7d5427ce0c93282fd3170c98721be58d7c4d
+PODFILE CHECKSUM: 020252ee3430de030b11f2135320b38d6e8821d7
 
 COCOAPODS: 1.8.3
