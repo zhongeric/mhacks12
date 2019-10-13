@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+     <!-- Site Metas -->
+    <title>Cytrus -find teammates!</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="app_version" data-spy="scroll" data-target="#navbarApp" data-offset="98">
+
+    <!-- LOADER -->
+    <!-- <div id="preloader">
+        <img class="preloader" src="images/loaders/loader-app.gif" alt="">
+    </div> end loader -->
+    <!-- END LOADER -->
+	<div class="top-bar">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="left-soi">
+						<ul>
+							<li class="social-links"><a href="#"><i class="fa fa-apple"></i></a></li>
+							<li class="social-links"><a href="#"><i class="fa fa-android"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+				</div>
+			</div>
+		</div>
+	</div>
+    <header class="header header_style_01">
+        <nav class="navbar header-nav navbar-expand-lg">
+            <div class="container">
+				<a class="navbar-brand" href="index.html"><img src="image/logo-app.png" alt="image" href="the website" target="_blank"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarApp" aria-controls="navbarApp" aria-expanded="false" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarApp">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link active" href="#home">Home</a></li>
+
+
+                        <li><a class="nav-link" href="#team">Team</a></li>
+
+
+
+						<li><a class="nav-link" href="#support">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="home" class="parallax first-section" style="background-image:url('uploads/bg-img.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="big-tagline">
+                        <h2>Expand your network by interests</h2>
+                        <p class="lead">With Cytrus you can meet new teammates </br>from all around the world! All based on the </br> profession, skills, goal, and characteristics!</p>
+                        <a data-scroll href="#order" class="btn btn-light btn-radius btn-brd"><i class="fa fa-play" aria-hidden="true"></i> GooglePlay </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    </div>
+                </div>
+                <div class="app_iphone_01 wow slideInUp hidden-xs hidden-sm" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <img src="uploads/app_iphone_01.png" alt="" class="img-fluid">
+                </div>
+                            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+</br>
+<style>
+  .bottom-three {
+     margin-bottom: 3cm;
+  }
+</style>
+
+    <div class="how-its-work clearfix">
+        <div class="hc colon1">
+            <h2>1</h2>
+            <h3>Go App Store!</h3>
+            <p class="lead">Search Cytrus and download! iOS and Android are both supported. Link is on the top of the page.</p>
+        </div><!-- end col -->
+
+        <div class="hc colon2">
+            <h2>2</h2>
+            <h3>Create an Account!</h3>
+            <p class="lead">Put your log-in information, which are email and password.</p>
+        </div><!-- end col -->
+
+        <div class="hc colon3">
+            <h2>3</h2>
+            <h3>Find Team!</h3>
+            <p class="lead">Click the person's photo if you want to make a group, or swipe to skip. </p>
+        </div><!-- end col -->
+
+        <div class="hc colon4">
+            <h2>4</h2>
+            <h3>Enjoy!</h3>
+            <p class="lead">Update your information such as skills, interests, goals, and etc. and make teams to reach your goal!</p>
+        </div><!-- end col -->
+    </div><!-- end how-its-work -->
+
+    <div id="screenshots" class="section wb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Screenshots of the App</h3>
+                <p class="lead"></p>
+            </div><!-- end title -->
+
+            <div class="owl-screenshots owl-carousel owl-theme">
+                <div class="owl-screen">
+                    <div class="service-widget">
+                        <div class="post-media entry wow fadeIn">
+                            <a href="uploads/mm4.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="uploads/mm4.png" alt="" class="img-fluid img-rounded">
+                            <div class="magnifier"></div>
+                        </div>
+                    </div><!-- end service -->
+                </div><!-- end col -->
+
+                <div class="owl-screen">
+                    <div class="service-widget">
+                        <div class="post-media entry wow fadeIn">
+                            <a href="uploads/main.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="uploads/main.png" alt="" class="img-fluid img-rounded">
+                            <div class="magnifier"></div>
+                        </div>
+                    </div><!-- end service -->
+                </div><!-- end col -->
+
+                <div class="owl-screen">
+                    <div class="service-widget">
+                        <div class="post-media entry wow fadeIn">
+                            <a href="uploads/screenshot_03.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="uploads/screenshot_03.png" alt="" class="img-fluid img-rounded">
+                            <div class="magnifier"></div>
+                        </div>
+                    </div><!-- end service -->
+                </div><!-- end col -->
+
+
+
+
+                <div class="owl-screen">
+                    <div class="service-widget">
+                        <div class="post-media entry wow fadeIn">
+                            <a href="uploads/screenshot_06.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="uploads/screenshot_06.jpg" alt="" class="img-fluid img-rounded">
+                            <div class="magnifier"></div>
+                        </div>
+                    </div><!-- end service -->
+                </div><!-- end col -->
+
+                <div class="owl-screen">
+                    <div class="service-widget">
+                        <div class="post-media entry wow fadeIn">
+                            <a href="uploads/screenshot_01.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="uploads/screenshot_01.png" alt="" class="img-fluid img-rounded">
+                            <div class="magnifier"></div>
+                        </div>
+                    </div><!-- end service -->
+                </div><!-- end col -->
+
+                <div class="owl-screen">
+                    <div class="service-widget">
+                        <div class="post-media entry wow fadeIn">
+                            <a href="uploads/screenshot_02.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="uploads/screenshot_02.png" alt="" class="img-fluid img-rounded">
+                            <div class="magnifier"></div>
+                        </div>
+                    </div><!-- end service -->
+                </div><!-- end col -->
+
+                <div class="owl-screen">
+                    <div class="service-widget">
+                        <div class="post-media entry wow fadeIn">
+                            <a href="uploads/screenshot_03.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="uploads/screenshot_03.png" alt="" class="img-fluid img-rounded">
+                            <div class="magnifier"></div>
+                        </div>
+                    </div><!-- end service -->
+                </div><!-- end col -->
+
+                <div class="owl-screen">
+                    <div class="service-widget">
+                        <div class="post-media entry wow fadeIn">
+                            <a href="uploads/screenshot_04.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="uploads/screenshot_04.png" alt="" class="img-fluid img-rounded">
+                            <div class="magnifier"></div>
+                        </div>
+                    </div><!-- end service -->
+                </div><!-- end col -->
+
+                <div class="owl-screen">
+                    <div class="service-widget">
+                        <div class="post-media entry wow fadeIn">
+                            <a href="uploads/screenshot_05.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="uploads/screenshot_05.png" alt="" class="img-fluid img-rounded">
+                            <div class="magnifier"></div>
+                        </div>
+                    </div><!-- end service -->
+                </div><!-- end col -->
+
+                <div class="owl-screen">
+                    <div class="service-widget">
+                        <div class="post-media entry wow fadeIn">
+                            <a href="uploads/screenshot_06.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="uploads/screenshot_06.png" alt="" class="img-fluid img-rounded">
+                            <div class="magnifier"></div>
+                        </div>
+                    </div><!-- end service -->
+                </div><!-- end col -->
+
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <div class="parallax section noover" style="background-image:url('uploads/ben_img.jpg');">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-7 col-sm-12">
+                    <div class="customwidget text-left">
+                        <h1>Download our app</h1>
+                        <p>"Teamwork is the ability to work together toward a common vision. The ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results." – Andrew Carnegie</p> <p>"Find a group of people who challenge and inspire you, spend a lot of time with them, and it will change your life." – Amy Poehler</p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><i class="flaticon-apple"></i> Available on Apple</li>
+                            <li class="list-inline-item"><i class="flaticon-android"></i> Available on Android</li>
+
+                        </ul><!-- end list -->
+                        <a href="#features" data-scroll class="btn btn-light btn-radius btn-brd">Learn More</a>
+                    </div>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <div id="team" class="section wb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>The Dev Team</h3>
+                <p class="lead">Young, Brilliant, Creative, Innovative, and HOT</p>
+            </div><!-- end title -->
+
+            <div class="row dev-list text-center">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="widget clearfix">
+                        <img src="uploads/eric.jfif" alt="" class="img-fluid rounded-circle">
+                        <div class="widget-title">
+                            <h3>Eric Zhong</h3>
+                            <small>Software Developer</small>
+                        </div>
+                        <!-- end title -->
+                          <p>Hello, I am Eric from the University of Michigan. I am iOS developer and founder of Cytrus.</p>
+
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com/eric.zhong.5680" target="_blank" class="btn global-radius"><i class="fa fa-facebook"></i></a>
+                            <a href="https://github.com/zhongeric" target="_blank" class="btn global-radius"><i class="fa fa-github"></i></a>
+                            <a href="https://twitter.com/_ericzhong" target="_blank" class="btn global-radius"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/eric-zhong/" target="_blank" class="btn global-radius"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div><!--widget -->
+                </div><!-- end col -->
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                    <div class="widget clearfix">
+                        <img src="uploads/suhan.jfif" alt="" class="img-fluid rounded-circle">
+                        <div class="widget-title">
+                            <h3>Suhan Park</h3>
+                            <small>Web Developer/GUI Designer</small>
+                        </div>
+                        <!-- end title -->
+                        <p>Hello, I am Suhan from Athens High School. I am Web Developer, GUI Designer, and founder of Cytrus.</p>
+
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com/suhan.park.010713" target="_blank" class="btn global-radius"><i class="fa fa-facebook"></i></a>
+                            <a href="https://github.com/spark010713" class="btn global-radius" target="_blank"><i class="fa fa-github"></i></a>
+                            <a href="https://twitter.com/simonpark01713" class="btn global-radius" target="_blank" ><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/suhan-park-b4a72413a/" target = "_blank" class="btn global-radius"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div><!--widget -->
+                </div><!-- end col -->
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                    <div class="widget clearfix">
+                        <img src="uploads/rohit.jfif" alt="" class="img-fluid rounded-circle">
+                        <div class="widget-title">
+                            <h3>Rohit Chakravarty</h3>
+                            <small>Database Developer</small>
+                        </div>
+                        <!-- end title -->
+                        <p>Hello, I am Rohit from the University of Michigan. I am Eric's girlfriend and founder of Cytrus.</p>
+
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com/rohit.chakravarty.58" target ="_blank" class="btn global-radius"><i class="fa fa-facebook"></i></a>
+                            <a href="https://github.com/Roro145" class="btn global-radius" target="_blank"><i class="fa fa-github" target ="_blank"></i></a>
+                            <a href="#" target ="_blank" class="btn global-radius"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/rohitc1/" target ="_blank" target="_blank"class="btn global-radius"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div><!--widget -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <div class="parallax section" style="background-image:url('uploads/ben_img_2.jpg');">
+        <div class="container">
+            <div class="row text-left stat-wrap">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-apple"></i></span>
+                    <p class="stat_count_download">12500</p>
+                    <h3>App Store</h3>
+                </div><!-- end col -->
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-amazon-logo"></i></span>
+                    <p class="stat_count_download">31000</p>
+                    <h3>Amazon</h3>
+                </div><!-- end col -->
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-android"></i></span>
+                    <p class="stat_count_download">15788</p>
+                    <h3>Google Play</h3>
+                </div><!-- end col -->
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-windows"></i></span>
+                    <p class="stat_count_download">21000</p>
+                    <h3>Windows App</h3>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+
+    <div id="testimonials" class="section wb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>User Reviews</h3>
+                <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers! <br>Let's see what others say about Appfast website template!</p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="testi-carousel owl-carousel owl-theme">
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
+                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_01.png" alt="" class="img-fluid alignleft">
+                                <h4>James Fernando <small>- Manager of Racer</small></h4>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
+                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_02.png" alt="" class="img-fluid alignleft">
+                                <h4>Jacques Philips <small>- Designer</small></h4>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
+                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_03.png" alt="" class="img-fluid alignleft">
+                                <h4>Venanda Mercy <small>- Newyork City</small></h4>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
+                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_01.png" alt="" class="img-fluid alignleft">
+                                <h4>James Fernando <small>- Manager of Racer</small></h4>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
+                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_02.png" alt="" class="img-fluid alignleft">
+                                <h4>Jacques Philips <small>- Designer</small></h4>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
+                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_03.png" alt="" class="img-fluid alignleft">
+                                <h4>Venanda Mercy <small>- Newyork City</small></h4>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div><!-- end testimonial -->
+                    </div><!-- end carousel -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+                <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <img src="uploads/logo-app.png" alt="" >
+                            <small>Our Quote to You</small>                        </div>
+                            “There's one sad truth in life I've found
+                              While journeying east and west –
+                              The only folks we really wound
+                              Are those we love the best.
+                              We flatter those we scarcely know,
+                              We please the fleeting guest,
+                              And deal full many a thoughtless blow
+                              To those who love us best.”
+                              – Ella Wheeler Wilcox
+                                            </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Contact Details</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:#">help@cytrus.com</a></li>
+                            <li><a href="#">www.cytrusapp.com</a></li>
+                            <li>500 S State St, Ann Arbor, MI 48109</li>
+                            <li>+1 248-930-****</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <div class="footer-distributed widget clearfix">
+                        <div class="widget-title">
+                            <h3>Newsletter</h3>
+							<p>“No road is long with good company.”
+                  — Turkish Proverb</p>
+                        </div>
+						<div class="footer-right">
+							<form method="get" action="#">
+								<input placeholder="Subscribe our newsletter.." name="search">
+								<i class="fa fa-envelope-o"></i>
+							</form>
+						</div>
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+                <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Social</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fa fa-github"></i> Github</a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i> Dribbble</a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i> Pinterest</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">Appfast</a> Design By :
+					<a href="https://html.design/">html design</a></p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+	<script src="js/zenith.js"></script>
+	<script>
+		$('#default').zenith({
+			layout: 'default' ,
+			slideSpeed: 450,
+			autoplaySpeed: 2000
+		});
+	</script>
+
+</body>
+</html>
