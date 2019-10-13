@@ -1,8 +1,10 @@
 Backend:
-- Uses a flask server to access python backend from swift frontend
-- Matching System: Initially a point based system, guages teamwork similaritie, project length,
-programming interests & programming knowledge
-- Based off of Google's Firebase database, uses Google's NLP Toolkit for Analyzing use bio's
+- Matching System: Utilizes K-NearestNeighbors to match the user with others that share similar personality traits, 
+Additionally uses a point based system - guages teamwork similarity, project length, programming interests & 
+programming knowledge
+- Based off of Google's Firebase database, uses Google's NLP Toolkit - entity extraction - for analyzing use bio's
 and enhancing the matching experience based on similar interests
+- Uses a flask server to access python backend from swift frontend
 - Swipe app navigation, allowing users to quickly narrow a field of candidates
+- Matching engine with connects user's that have shown either singular or mutual interest in each other
 - Neural Network for determing probability user will 'swipe back' (BETA)
