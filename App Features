@@ -1,0 +1,8 @@
+Backend:
+- Uses a flask server to access python backend from swift frontend
+- Matching System: Initially a point based system, guages teamwork similaritie, project length,
+programming interests & programming knowledge
+- Based off of Google's Firebase database, uses Google's NLP Toolkit for Analyzing use bio's
+and enhancing the matching experience based on similar interests
+- Swipe app navigation, allowing users to quickly narrow a field of candidates
+- Neural Network for determing probability user will 'swipe back' (BETA)
