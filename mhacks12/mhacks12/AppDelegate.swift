@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,12 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        window = UIWindow(frame: UIScreen.main.bounds)
-        
-        let containerViewController = ContainerViewController()
-        
-        window!.rootViewController = containerViewController
-        window!.makeKeyAndVisible()
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//
+//        let containerViewController = ContainerViewController()
+//        
+//        window!.rootViewController = containerViewController
+//        window!.makeKeyAndVisible()
+        FirebaseApp.configure()
         return true
     }
 

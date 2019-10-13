@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-mhacks12/Pods-mhacks12-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseEmailAuthUI.bundle

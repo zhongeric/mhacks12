@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>719611185311-uehsmb3493452oj2ehu1afperp8do3ic.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.719611185311-uehsmb3493452oj2ehu1afperp8do3ic</string>
+	<key>API_KEY</key>
+	<string>AIzaSyABhI9JQfKgkSonQyOzRDWdBirLTSiQqf0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>719611185311</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ericzhong.mhacks12</string>
+	<key>PROJECT_ID</key>
+	<string>mhacks12-2bfee</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mhacks12-2bfee.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:719611185311:ios:d762c57cb853cc73b7baaa</string>
+	<key>DATABASE_URL</key>
+	<string>https://mhacks12-2bfee.firebaseio.com</string>
+</dict>
+</plist>

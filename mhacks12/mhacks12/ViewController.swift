@@ -8,10 +8,12 @@
 
 import UIKit
 import Kingfisher
+import ImageSlideshow
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var mainImageView: UIView!
+    @IBOutlet weak var slideshow: ImageSlideshow!
+//    @IBOutlet weak var mainImageView: UIView!
     @IBOutlet weak var mainImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var card: UIView!
@@ -47,20 +49,38 @@ class ViewController: UIViewController {
     }
     
     func translate(){
-        UIView.animate(withDuration: 0.5, animations: {
+        let offset = CGFloat(self.view.frame.width)
+        UIView.animate(withDuration: 0.25, animations: {
             var t = CGAffineTransform.identity
-            t = t.translatedBy(x: -500, y: 0)
-            t = t.rotated(by: CGFloat.pi / -4)
+            t = t.translatedBy(x: -offset, y: 0)
+//            t = t.rotated(by: CGFloat.pi / -4)
             // ... add as many as you want, then apply it to to the view
             self.card.transform = t
 //            self.card.transform = CGAffineTransform(translationX: -500, y: 0) // TODO: change to length of screen
         }) { (completed) in
-            self.card.transform = CGAffineTransform(translationX: 500, y: 0)
+            self.card.transform = CGAffineTransform(translationX: offset, y: 0)
             UIView.animate(withDuration: 0.25, delay: 0.0, options: [], animations: {
                 self.card.transform = CGAffineTransform(translationX: 0, y: 0)
             }, completion: nil)
         }
     }
+    
+    func translateRight(){
+        let offset = CGFloat(self.view.frame.width)
+            UIView.animate(withDuration: 0.25, animations: {
+                var t = CGAffineTransform.identity
+                t = t.translatedBy(x: offset, y: 0)
+//                t = t.rotated(by: CGFloat.pi / 4)
+                // ... add as many as you want, then apply it to to the view
+                self.card.transform = t
+    //            self.card.transform = CGAffineTransform(translationX: -500, y: 0) // TODO: change to length of screen
+            }) { (completed) in
+                self.card.transform = CGAffineTransform(translationX: -offset, y: 0)
+                UIView.animate(withDuration: 0.25, delay: 0.0, options: [], animations: {
+                    self.card.transform = CGAffineTransform(translationX: 0, y: 0)
+                }, completion: nil)
+            }
+        }
     
     func reset(){
         if let viewWithTag = self.view.viewWithTag(100) {
@@ -93,15 +113,21 @@ class ViewController: UIViewController {
         let newValue = names.randomElement()
         print(newValue!)
         nameLabel.text = newValue
-        let images = ["https://media.glamour.com/photos/5c41e410b3ec153a69d6cbf9/6:7/w_2309,h_2694,c_limit/GettyImages-902", "https://media.bizj.us/view/img/11292173/bizwomenkendalljenner*320xx2879-4319-103-0.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqehJus4336hYJ2oJEZvfew_MriOnt1MhBaKf0Wilr2o_5Wf8jCw&s"]
-        let chosen_url = images.randomElement()
-        let url = URL(string: chosen_url!)
-        mainImage.kf.setImage(with: url)
+        print(self.slideshow)
+        self.slideshow.setImageInputs([
+          KingfisherSource(urlString: "https://media.glamour.com/photos/5c41e410b3ec153a69d6cbf9/6:7/w_2309,h_2694,c_limit/GettyImages-902")!,
+          KingfisherSource(urlString: "https://media.glamour.com/photos/5c41e410b3ec153a69d6cbf9/6:7/w_2309,h_2694,c_limit/GettyImages-902")!,
+          KingfisherSource(urlString: "https://media.bizj.us/view/img/11292173/bizwomenkendalljenner*320xx2879-4319-103-0.jpg")!,
+          KingfisherSource(urlString: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqehJus4336hYJ2oJEZvfew_MriOnt1MhBaKf0Wilr2o_5Wf8jCw&s")!
+        ])
+//        let chosen_url = images.randomElement()
+        let url = URL(string: "https://media.glamour.com/photos/5c41e410b3ec153a69d6cbf9/6:7/w_2309,h_2694,c_limit/GettyImages-902")
+//        mainImage.kf.setImage(with: url)
         self.backgroundImage.kf.setImage(with: url)
 //        self.sendSubviewToBack(view: self.backgroundImage)
 
         reset()
-        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.prominent)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         blurEffectView.tag = 100
@@ -118,33 +144,73 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading th
-        self.mainImageView.layer.cornerRadius = 30
-        self.mainImage.layer.cornerRadius = 30
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+
+        
+        self.slideshow.layer.cornerRadius = 30
+//        self.mainImage.layer.cornerRadius = 30
  
         self.descriptionView.layer.cornerRadius = 35
+        self.card.layer.cornerRadius = 25
 //        self.mainImage.layer.cornerRadius = 10
+        
+        // MARK: Slideshow
+        
+        self.slideshow.slideshowInterval = 5.0
+        self.slideshow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
+        self.slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill
 
-        // MARK: Skills View
+        let pageControl = UIPageControl()
+        pageControl.currentPageIndicatorTintColor = UIColor.lightGray
+        pageControl.pageIndicatorTintColor = UIColor.black
+        self.slideshow.pageIndicator = pageControl
 
+        // optional way to show activity indicator during image load (skipping the line will show no activity indicator)
+        self.slideshow.activityIndicator = DefaultActivityIndicator()
+        self.slideshow.delegate = self
 
+        // can be used with other sample sources as `afNetworkingSource`, `alamofireSource` or `sdWebImageSource` or `kingfisherSource`
+//        slideshow.setImageInputs(localSource)
+
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTap))
+        self.slideshow.addGestureRecognizer(recognizer)
+        
 
     }
     
-    // MARK: IBActions
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
     
-    @IBAction func siwpeLeft(sender: Any) {
+    // MARK: IBActions
+    @IBAction func swipeLeft(_ sender: Any) {
         print("Left")
-        
+               
         // move to left
         translate()
         showNew()
-        
-        
     }
-    
+
+    @IBAction func swipeRight(_ sender: Any) {
+        print("Right")
+        
+        // move to left
+        translateRight()
+        showNew()
+    }
     @IBAction func showMenu(_ sender: Any) {
         print("Show menu tapped")
-        delegate?.toggleLeftPanel() // only if delegate has a value
+//        delegate?.toggleLeftPanel() // only if delegate has a value
+    }
+    
+    @objc func didTap() {
+        let fullScreenController = slideshow.presentFullScreenController(from: self)
+        // set the activity indicator for full screen controller (skipping the line will show no activity indicator)
+        fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
     }
     
 }
@@ -157,6 +223,12 @@ extension ViewController: SidePanelViewControllerDelegate {
 //
     delegate?.collapseSidePanels()
   }
+}
+
+extension ViewController: ImageSlideshowDelegate {
+    func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int) {
+        print("current page:", page)
+    }
 }
 
 protocol ViewControllerDelegate {

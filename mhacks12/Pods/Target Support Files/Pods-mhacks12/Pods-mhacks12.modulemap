@@ -1,0 +1,6 @@
+framework module Pods_mhacks12 {
+  umbrella header "Pods-mhacks12-umbrella.h"
+
+  export *
+  module * { export * }
+}
