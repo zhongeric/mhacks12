@@ -18,10 +18,6 @@
 		751C03CD2351730E00464C76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751C03CB2351730E00464C76 /* LaunchScreen.storyboard */; };
 		751C03D82351730F00464C76 /* mhacks12Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751C03D72351730F00464C76 /* mhacks12Tests.swift */; };
 		751C03E32351730F00464C76 /* mhacks12UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751C03E22351730F00464C76 /* mhacks12UITests.swift */; };
-		7568012923524A30001C7D00 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7568012823524A30001C7D00 /* SidePanelViewController.swift */; };
-		7568012B23524B6F001C7D00 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7568012A23524B6F001C7D00 /* ContainerViewController.swift */; };
-		7568012D2352506F001C7D00 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7568012C2352506F001C7D00 /* Animal.swift */; };
-		7568012F23525088001C7D00 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7568012E23525088001C7D00 /* AnimalCell.swift */; };
 		7568013123525BDB001C7D00 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7568013023525BDB001C7D00 /* LeftViewController.swift */; };
 		7568013323526FC9001C7D00 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7568013223526FC9001C7D00 /* LoginViewController.swift */; };
 		75680135235270CD001C7D00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75680134235270CD001C7D00 /* GoogleService-Info.plist */; };
@@ -51,7 +47,7 @@
 		549343C525A8D90940DEF72C /* Pods_mhacks12.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mhacks12.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65402AC73F4A1DE8C16FFB21 /* Pods-mhacks12Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mhacks12Tests.debug.xcconfig"; path = "Target Support Files/Pods-mhacks12Tests/Pods-mhacks12Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		75181CEF23528FDD0073A4B9 /* RightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RightViewController.swift; path = /Users/EricZhong/mhacks12/mhacks12/mhacks12/RightViewController.swift; sourceTree = "<absolute>"; };
-		751C03BD2351730C00464C76 /* mhacks12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mhacks12.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		751C03BD2351730C00464C76 /* Cytrus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cytrus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		751C03C02351730C00464C76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		751C03C22351730C00464C76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		751C03C42351730C00464C76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,10 +61,6 @@
 		751C03DE2351730F00464C76 /* mhacks12UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mhacks12UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		751C03E22351730F00464C76 /* mhacks12UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mhacks12UITests.swift; sourceTree = "<group>"; };
 		751C03E42351730F00464C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7568012823524A30001C7D00 /* SidePanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
-		7568012A23524B6F001C7D00 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		7568012C2352506F001C7D00 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
-		7568012E23525088001C7D00 /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
 		7568013023525BDB001C7D00 /* LeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		7568013223526FC9001C7D00 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		75680134235270CD001C7D00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -135,7 +127,7 @@
 		751C03BE2351730C00464C76 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				751C03BD2351730C00464C76 /* mhacks12.app */,
+				751C03BD2351730C00464C76 /* Cytrus.app */,
 				751C03D32351730F00464C76 /* mhacks12Tests.xctest */,
 				751C03DE2351730F00464C76 /* mhacks12UITests.xctest */,
 			);
@@ -148,15 +140,11 @@
 				75680134235270CD001C7D00 /* GoogleService-Info.plist */,
 				751C03C02351730C00464C76 /* AppDelegate.swift */,
 				751C03C22351730C00464C76 /* SceneDelegate.swift */,
-				7568012C2352506F001C7D00 /* Animal.swift */,
-				7568012E23525088001C7D00 /* AnimalCell.swift */,
 				751C03C42351730C00464C76 /* ViewController.swift */,
-				7568012A23524B6F001C7D00 /* ContainerViewController.swift */,
 				75181CEF23528FDD0073A4B9 /* RightViewController.swift */,
 				751C03C62351730C00464C76 /* Main.storyboard */,
 				7568013223526FC9001C7D00 /* LoginViewController.swift */,
 				7568013023525BDB001C7D00 /* LeftViewController.swift */,
-				7568012823524A30001C7D00 /* SidePanelViewController.swift */,
 				751C03C92351730E00464C76 /* Assets.xcassets */,
 				751C03CB2351730E00464C76 /* LaunchScreen.storyboard */,
 				751C03CE2351730E00464C76 /* Info.plist */,
@@ -212,7 +200,7 @@
 			);
 			name = mhacks12;
 			productName = mhacks12;
-			productReference = 751C03BD2351730C00464C76 /* mhacks12.app */;
+			productReference = 751C03BD2351730C00464C76 /* Cytrus.app */;
 			productType = "com.apple.product-type.application";
 		};
 		751C03D22351730F00464C76 /* mhacks12Tests */ = {
@@ -433,15 +421,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7568013323526FC9001C7D00 /* LoginViewController.swift in Sources */,
-				7568012923524A30001C7D00 /* SidePanelViewController.swift in Sources */,
 				751C03C52351730C00464C76 /* ViewController.swift in Sources */,
-				7568012B23524B6F001C7D00 /* ContainerViewController.swift in Sources */,
 				751C03C12351730C00464C76 /* AppDelegate.swift in Sources */,
 				751C03C32351730C00464C76 /* SceneDelegate.swift in Sources */,
 				7568013123525BDB001C7D00 /* LeftViewController.swift in Sources */,
 				75181CF023528FDD0073A4B9 /* RightViewController.swift in Sources */,
-				7568012D2352506F001C7D00 /* Animal.swift in Sources */,
-				7568012F23525088001C7D00 /* AnimalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,7 +598,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EA16F85221AC38F403B9063F /* Pods-mhacks12.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RV7A82TL2A;
 				INFOPLIST_FILE = mhacks12/Info.plist;
@@ -623,7 +607,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ericzhong.mhacks12;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cytrus;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -633,7 +617,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0DC202BCB309153943E59864 /* Pods-mhacks12.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RV7A82TL2A;
 				INFOPLIST_FILE = mhacks12/Info.plist;
@@ -642,7 +626,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ericzhong.mhacks12;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cytrus;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

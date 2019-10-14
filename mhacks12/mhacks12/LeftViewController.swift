@@ -16,7 +16,9 @@ import SwiftyJSON
 
 class LeftViewController: UIViewController {
 //    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var skillsView: UIStackView!
+    @IBOutlet weak var bioField: UITextView!
     
     @IBOutlet weak var avatarImage: UIImageView!
     
@@ -31,36 +33,37 @@ class LeftViewController: UIViewController {
         super.viewDidLoad()
         loadData()
         
-        let userID = Auth.auth().currentUser?.uid
-        if(userID != nil) { // user is signed in
-            print("user id is")
-            print(userID!)
-            let parameters: [String: String] = [
-                "UID":userID!
-            ]
-
-            AF.request("http://3.92.77.227/get_profile", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-                        .responseJSON { response in
-//                            print(response)
-            //to get status code
-//                            if let status = response.response?.statusCode {
-//                                switch(status){
-//                                case 201:
-//                                    print("example success")
-//                                default:
-//                                    print("error with response status: \(status)")
-//                                }
-//                            }
-            //to get JSON return value
-                        if let result = response.value {
-                            let JSON = result as! NSDictionary
-                            print(JSON)
-                        }
-                }
-        }
-        else {
-            // kick back to login
-        }
+//        let userID = Auth.auth().currentUser?.uid
+//        if(userID != nil) { // user is signed in
+//            print("user id is")
+//            print(userID!)
+//            let parameters: [String: String] = [
+//                "UID":userID!
+//            ]
+//
+//            AF.request("http://3.92.77.227/get_profile", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+//                        .responseJSON { response in
+////                            print(response)
+//            //to get status code
+////                            if let status = response.response?.statusCode {
+////                                switch(status){
+////                                case 201:
+////                                    print("example success")
+////                                default:
+////                                    print("error with response status: \(status)")
+////                                }
+////                            }
+//            //to get JSON return value
+//                        if let result = response.value {
+//                            let json = JSON(result as! NSDictionary)
+//                            print(json)
+//                            self.nameLabel.text = json["Data"]["Name"].stringValue
+//                        }
+//                }
+//        }
+//        else {
+//            // kick back to login
+//        }
     }
     
     // MARK: Helper functions

@@ -13,6 +13,7 @@ import FirebaseDatabase
 import Alamofire
 import Firebase
 import SwiftyJSON
+import FirebaseUI
 
 class ViewController: UIViewController {
 
@@ -27,6 +28,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var showMenuBtn: UIButton!
     @IBOutlet weak var menu: UIView!
+    @IBOutlet weak var schoolLabel: UILabel!
+    @IBOutlet weak var workLabel: UILabel!
+    @IBOutlet weak var teamImage: UIImageView!
     
     var delegate: ViewControllerDelegate?
     
@@ -45,6 +49,44 @@ class ViewController: UIViewController {
         "8": "Swift",
         "9": "Java",
         "10": "PHP"
+    ]
+    
+    let schools = [
+        "University of Michigan",
+        "University of California, Berkeley",
+        "Harvard University",
+        "California Institute of Technology"
+    ]
+    
+    let work = [
+        "Apple",
+        "Microsoft",
+        "Google",
+        "Uber",
+        "Lyft",
+        "Facebook",
+        "Mcdonalds",
+        "Independent"
+    ]
+    
+    let image_array = [
+        "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/3040042/pexels-photo-3040042.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/3045357/pexels-photo-3045357.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/3065016/pexels-photo-3065016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/3037589/pexels-photo-3037589.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/3046338/pexels-photo-3046338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/3045570/pexels-photo-3045570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/247878/pexels-photo-247878.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/3061814/pexels-photo-3061814.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/3039467/pexels-photo-3039467.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/3037735/pexels-photo-3037735.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/2897883/pexels-photo-2897883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/3037549/pexels-photo-3037549.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/3038287/pexels-photo-3038287.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/3047341/pexels-photo-3047341.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/937481/pexels-photo-937481.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     ]
 
     // MARK: Helper functions
@@ -156,7 +198,27 @@ class ViewController: UIViewController {
 
                         print(json["Data"]["Name"])
                         self.nameLabel.text = json["Data"]["Name"].stringValue
-                        self.bioLabel.text = json["Data"]["Bio"].stringValue
+                        print(json["Bio"].stringValue)
+                        if(json["Bio"].stringValue == nil){
+                            self.bioLabel.text = "New User"
+                        }
+                        else {
+                            self.bioLabel.text = json["Bio"].stringValue
+                        }
+                        let chosen_school = self.schools.randomElement()
+                        self.schoolLabel.text = "Studied at " + chosen_school!
+                        
+                        let chosen_work = self.work.randomElement()
+                        self.workLabel.text = "Worked at " + chosen_work!
+                        
+                        var image_name = "person." + json["Data"]["Desired Team Size"].stringValue
+                        print(image_name)
+                        if(image_name == "person.4"){
+                            image_name = "person.3"
+                        }
+                        
+                        self.teamImage.image = UIImage(systemName: image_name)
+                        //json["Data"]["Desired Team Size"]
 //                        place_holder_dict = JSON
                         
                         if(self.skillsView.arrangedSubviews.count > 1){
@@ -249,19 +311,14 @@ class ViewController: UIViewController {
         }
 
         
-        let names = ["Frodo", "Sam", "Wise", "Gamgee", "John", "Sarah", "Jacob", "Melinda"]
-        let newValue = names.randomElement()
-        print(newValue!)
-        nameLabel.text = newValue
-//        print(self.slideshow)
+        
+        let chosen_url = self.image_array.randomElement()
+        
         self.slideshow.setImageInputs([
-          KingfisherSource(urlString: "https://media.glamour.com/photos/5c41e410b3ec153a69d6cbf9/6:7/w_2309,h_2694,c_limit/GettyImages-902")!,
-          KingfisherSource(urlString: "https://media.glamour.com/photos/5c41e410b3ec153a69d6cbf9/6:7/w_2309,h_2694,c_limit/GettyImages-902")!,
-          KingfisherSource(urlString: "https://media.bizj.us/view/img/11292173/bizwomenkendalljenner*320xx2879-4319-103-0.jpg")!,
-          KingfisherSource(urlString: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqehJus4336hYJ2oJEZvfew_MriOnt1MhBaKf0Wilr2o_5Wf8jCw&s")!
+            KingfisherSource(urlString: chosen_url!)!
         ])
 //        let chosen_url = images.randomElement()
-        let url = URL(string: "https://media.glamour.com/photos/5c41e410b3ec153a69d6cbf9/6:7/w_2309,h_2694,c_limit/GettyImages-902")
+        let url = URL(string: chosen_url!)
 //        mainImage.kf.setImage(with: url)
         self.backgroundImage.kf.setImage(with: url)
 //        self.sendSubviewToBack(view: self.backgroundImage)
@@ -315,12 +372,37 @@ class ViewController: UIViewController {
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTap))
         self.slideshow.addGestureRecognizer(recognizer)
         
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 75))
+        imageView.contentMode = .scaleAspectFit
 
+        let image = UIImage(#imageLiteral(resourceName: "smaller_logo"))
+        imageView.image = image
+
+        navigationItem.titleView = imageView
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.navigationItem.setHidesBackButton(true, animated:true);
+//        FUIAuth.defaultAuthUI()?.auth?.addStateDidChangeListener { auth, user in
+//                  if user != nil {
+//                    // User is signed in. Show home screen
+//                    print("already signed in")
+//                    self.showNew()
+//                  } else {
+//                    // No User is signed in. Show user the login screen
+//                    print("not signed in")
+//        //            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+//        //            self.navigationController?.popToRootViewController(animated: true)
+//                    self.view.window?.rootViewController?.presentedViewController?.dismiss(animated: true, completion: nil)
+//
+//                    print("returned to root")
+//
+//                  }
+//        }
     }
 
     
@@ -356,19 +438,9 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: SidePanelViewControllerDelegate {
-  func didSelectAnimal(_ animal: Animal) {
-//    imageView.image = animal.image
-//    titleLabel.text = animal.title
-//    creatorLabel.text = animal.creator
-//
-    delegate?.collapseSidePanels()
-  }
-}
-
 extension ViewController: ImageSlideshowDelegate {
     func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int) {
-        print("current page:", page)
+//        print("current page:", page)
     }
 }
 
